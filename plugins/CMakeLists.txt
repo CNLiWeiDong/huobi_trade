@@ -1,0 +1,3 @@
+add_subdirectory(trade_db_plugin)
+add_subdirectory(grid_trade_plugin)
+add_subdirectory(trade_api_plugin)

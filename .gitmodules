@@ -1,0 +1,3 @@
+[submodule "hbapp_public"]
+	path = hbapp_public
+	url = git@github.com:CNLiWeiDong/hbapp_public.git
