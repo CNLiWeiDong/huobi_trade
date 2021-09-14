@@ -4,7 +4,7 @@
 #include <boost/algorithm/string/regex.hpp>
 #include <stdlib.h>
 #include <set>
-#include <hb/crypto/aes.hpp>
+#include <hb/crypto/aes.h>
 
 namespace hb{ namespace plugin{
         static appbase::abstract_plugin& _trade_api_plugin = app().register_plugin<trade_api_plugin>();

@@ -20,7 +20,7 @@ target_link_libraries( grid_trade_plugin
         appbase
         hb
         log_plugin
-        grid_db_plugin
+        trade_db_plugin
         send_mail_plugin
         trade_api_plugin
         )

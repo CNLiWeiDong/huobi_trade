@@ -5,7 +5,7 @@
 namespace hb{ namespace plugin {
         void delvier_order::complete_sale_order(const order_result_type& order_result, const sale_tx_type& tx) {
             log_info<<"[fn] delvier_order::complete_sale_order";
-            auto &db_plugin = app().get_plugin<grid_db_plugin>();
+            auto &db_plugin = app().get_plugin<trade_db_plugin>();
             auto db_api = db_plugin.get_api();
             auto &mail_plugin = app().get_plugin<send_mail_plugin>();
             auto mail_api = mail_plugin.get_api();
@@ -47,7 +47,7 @@ namespace hb{ namespace plugin {
         }
         void delvier_order::complete_buy_order(const order_result_type& order_result, const buy_tx_type& tx){
             log_info<<"[fn] delvier_order::complete_buy_order";
-            auto &db_plugin = app().get_plugin<grid_db_plugin>();
+            auto &db_plugin = app().get_plugin<trade_db_plugin>();
             auto db_api = db_plugin.get_api();
             auto &mail_plugin = app().get_plugin<send_mail_plugin>();
             auto mail_api = mail_plugin.get_api();
@@ -84,7 +84,7 @@ namespace hb{ namespace plugin {
         }
         std::set<std::string> delvier_order::deal(){
             log_info<<"[fn] delvier_order::deal";
-            auto &db_plugin = app().get_plugin<grid_db_plugin>();
+            auto &db_plugin = app().get_plugin<trade_db_plugin>();
             auto db_api = db_plugin.get_api();
             auto sellings = db_api->get_new_sale_array();
             auto buyings = db_api->get_new_buy_array();

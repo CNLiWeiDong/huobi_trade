@@ -5,7 +5,7 @@
 #include <time.h>
 #include <stdio.h>
 #include <algorithm>
-#include <hb/crypto/base.hpp>
+#include <hb/crypto/base.h>
 #include <hb/log/log.h>
 #include <openssl/hmac.h>
 #include <hb/trade_api_plugin/trade_api_error.h>

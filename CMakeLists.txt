@@ -4,6 +4,7 @@ project(num_monitor)
 set( CMAKE_CXX_STANDARD 20 )
 #set constum find_package modele path.
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/CMakeModules")
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/hbapp_public/CMakeModules")
 #set cmake test enable
 enable_testing()
 #New CXX_STANDARD and CXX_EXTENSIONS target properties may specify values which CMake uses to compute required compile options such as -std=c++11 or -std=gnu++11.

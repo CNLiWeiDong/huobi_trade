@@ -10,7 +10,7 @@
 #include <functional>
 #include <string>
 #include <hb/log/log.h>
-#include <hb/grid_db_plugin/grid_db_plugin.h>
+#include <hb/trade_db_plugin/trade_db_plugin.h>
 #include <hb/send_mail_plugin/send_mail_plugin.h>
 #include <hb/trade_api_plugin/trade_api_plugin.h>
 #include <boost/asio.hpp>

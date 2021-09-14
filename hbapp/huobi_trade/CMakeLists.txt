@@ -13,6 +13,6 @@ target_include_directories(huobi_trade
 target_link_libraries(huobi_trade
         PRIVATE appbase
         PRIVATE ${Boost_LIBRARIES} #boost test
-        PRIVATE -Wl,${whole_archive_flag} log_plugin                        -Wl,${no_whole_archive_flag}
-        PRIVATE -Wl,${whole_archive_flag} grid_trad_plugin                      -Wl,${no_whole_archive_flag}
+        PRIVATE -Wl,${whole_archive_flag} log_plugin                             -Wl,${no_whole_archive_flag}
+        PRIVATE -Wl,${whole_archive_flag} grid_trade_plugin                      -Wl,${no_whole_archive_flag}
         )

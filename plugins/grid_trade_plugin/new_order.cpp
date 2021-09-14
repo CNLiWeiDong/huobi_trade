@@ -19,7 +19,7 @@ namespace hb{ namespace plugin {
             log_info<<"[fn] new_order::add_sale_order";
             auto &trade_plugin = app().get_plugin<trade_api_plugin>();
             auto trade_api = trade_plugin.get_api();
-            auto &db_plugin = app().get_plugin<grid_db_plugin>();
+            auto &db_plugin = app().get_plugin<trade_db_plugin>();
             auto db_api = db_plugin.get_api();
 
             string order_id = trade_api->new_sale_order(sale_num, sale_price);
@@ -35,7 +35,7 @@ namespace hb{ namespace plugin {
             log_info<<"[fn] new_order::add_buy_order";
             auto &trade_plugin = app().get_plugin<trade_api_plugin>();
             auto trade_api = trade_plugin.get_api();
-            auto &db_plugin = app().get_plugin<grid_db_plugin>();
+            auto &db_plugin = app().get_plugin<trade_db_plugin>();
             auto db_api = db_plugin.get_api();
 
             const double buy_number = buy_amount/buy_price;
@@ -71,7 +71,7 @@ namespace hb{ namespace plugin {
                     cur_timestamp-last_buy_time_<buy_sleep_seconds_)
                 return false;
             auto price = query_price(false);
-            auto &db_plugin = app().get_plugin<grid_db_plugin>();
+            auto &db_plugin = app().get_plugin<trade_db_plugin>();
             auto db_api = db_plugin.get_api();
             auto sold_list = db_api->get_delivered_sale_array();
             // do sale 
